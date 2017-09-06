@@ -1,0 +1,110 @@
+@import "partials/mixins";
+@import "partials/grid";
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, sans-serif;
+  color: #007a99;
+}
+
+/*GRID*/
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .row {
+    &:after,
+    &:before {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    @for $i from 1 through 12 {
+      .col-#{$i} {
+        @include tablets-gallery;
+        @include phones-gallery;
+        width: (100%/12) * $i;
+        float: left;
+        min-height: 1px;
+        height: 100px*$i;
+        padding: 12px;
+        border: 10px solid #fff;
+      }
+    }
+  }
+}
+
+.order {
+  display: flex;
+}
+
+#menu {
+  @include nav-style;
+  @include phones-gallery;
+  @include tablets-nav-font;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  #drop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    li {
+      list-style: none;
+      padding-right: 1.5rem;
+
+      a {
+        text-decoration: none;
+
+        &:hover {
+          color: #33d6ff;
+        }
+      }
+    }
+  }
+}
+
+#title {
+  @include nav-style;
+  @include tablets-nav;
+  @include smart-nav;
+  @include phone-big-nav;
+  @include phone-small-nav;
+  @include center;
+  font-size: 2rem;
+}
+
+#foot {
+  @include center;
+  height: 100px;
+  width: 100%;
+
+  p {
+    text-align: center;
+  }
+}
+
+/*Photo list*/
+$list: 1,2,3,4,5,6,7,8,9,10,11,12,13,14;
+@each $var in $list {
+
+  .photo-#{$var} {
+    background-image: url("../img/#{$var}.jpg");
+    background-size: cover;
+    background-position: center;
+
+    &:hover {
+      border-radius: 5%;
+      @include hoverAccept;
+    }
+  }
+}

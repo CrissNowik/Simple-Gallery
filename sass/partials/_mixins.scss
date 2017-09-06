@@ -1,0 +1,67 @@
+/*Animation*/
+@mixin gentleShow {
+  transform: scale(1.7,1.7);
+  transition: 1.5s ease-in-out;
+}
+
+/*media queries*/
+@mixin phones-gallery {
+   @media screen and (max-width: 480px){
+    width: 100%;
+  }
+}
+
+@mixin tablets-gallery {
+   @media screen and (max-width: 1050px){
+    width: 50%;
+  }
+}
+
+@mixin tablets-nav {
+   @media screen and (max-width: 1010px){
+    font-size: 1.5rem;
+  }
+}
+
+@mixin tablets-nav-font {
+   @media screen and (min-width: 1200px){
+    font-size: 1.5rem;
+  }
+}
+
+@mixin smart-nav {
+   @media screen and (max-width: 780px){
+    font-size: 1.3rem;
+  }
+}
+
+@mixin phone-big-nav {
+   @media screen and (max-width: 685px){
+    font-size: 1.3rem;
+    text-align: center;
+  }
+}
+
+@mixin phone-small-nav {
+   @media screen and (max-width: 485px){
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+@mixin hoverAccept {
+  @media screen and (min-width:700px){
+    @include gentleShow;
+  }
+}
+
+/*look*/
+@mixin nav-style {
+  height: 100px;
+}
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
