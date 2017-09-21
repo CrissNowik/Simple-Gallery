@@ -8,6 +8,7 @@ Simple gallery created on self-made responsive grid styled by SASS.
 First approach to create family photo-gallery which will be available on computers as well as on mobile devices. 
 
 ### Demo:
+https://crissnowik.github.io/Simple-Gallery/
 
 
 
