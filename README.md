@@ -1,19 +1,16 @@
 # Simple-Gallery-Responsive-Grid
  
 
-Description:
-=============
+### Description:
 Simple gallery created on self-made responsive grid styled by SASS. 
 
-Inspiration:
-============
+### Inspiration:
 First approach to create family photo-gallery which will be available on computers as well as on mobile devices. 
 
-Demo:
-=====
+### Demo:
 
 
-Copyright:
-==========
+
+### Copyright:
 CrissNowik
-# Simple-Gallery
+
